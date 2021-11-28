@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9D32BA2754093000101BC9 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D32B92754093000101BC9 /* FactViewController.swift */; };
+		FA9D32BD275410C500101BC9 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D32BC275410C500101BC9 /* Fact.swift */; };
 		FACBF32D2754035D00E22F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBF32C2754035D00E22F6F /* AppDelegate.swift */; };
 		FACBF32F2754035D00E22F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBF32E2754035D00E22F6F /* SceneDelegate.swift */; };
 		FACBF3312754035D00E22F6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBF3302754035D00E22F6F /* ViewController.swift */; };
 		FACBF3342754035D00E22F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACBF3322754035D00E22F6F /* Main.storyboard */; };
 		FACBF3362754036000E22F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACBF3352754036000E22F6F /* Assets.xcassets */; };
 		FACBF3392754036000E22F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACBF3372754036000E22F6F /* LaunchScreen.storyboard */; };
+		FACBF3442754040600E22F6F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBF3432754040600E22F6F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA9D32B92754093000101BC9 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
+		FA9D32BC275410C500101BC9 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		FACBF3292754035D00E22F6F /* HW_2.10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_2.10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACBF32C2754035D00E22F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACBF32E2754035D00E22F6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		FACBF3352754036000E22F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACBF3382754036000E22F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FACBF33A2754036000E22F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACBF3432754040600E22F6F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA9D32BB275410A500101BC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA9D32BC275410C500101BC9 /* Fact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FACBF3202754035D00E22F6F = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +70,50 @@
 		FACBF32B2754035D00E22F6F /* HW_2.10 */ = {
 			isa = PBXGroup;
 			children = (
-				FACBF32C2754035D00E22F6F /* AppDelegate.swift */,
-				FACBF32E2754035D00E22F6F /* SceneDelegate.swift */,
-				FACBF3302754035D00E22F6F /* ViewController.swift */,
-				FACBF3322754035D00E22F6F /* Main.storyboard */,
-				FACBF3352754036000E22F6F /* Assets.xcassets */,
-				FACBF3372754036000E22F6F /* LaunchScreen.storyboard */,
-				FACBF33A2754036000E22F6F /* Info.plist */,
+				FA9D32BB275410A500101BC9 /* Models */,
+				FACBF3452754040D00E22F6F /* Services */,
+				FACBF3402754039100E22F6F /* Configs */,
+				FACBF342275403DD00E22F6F /* ViewControllers */,
+				FACBF341275403CF00E22F6F /* Storyboards */,
 			);
 			path = HW_2.10;
+			sourceTree = "<group>";
+		};
+		FACBF3402754039100E22F6F /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				FACBF32C2754035D00E22F6F /* AppDelegate.swift */,
+				FACBF32E2754035D00E22F6F /* SceneDelegate.swift */,
+				FACBF3352754036000E22F6F /* Assets.xcassets */,
+				FACBF33A2754036000E22F6F /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		FACBF341275403CF00E22F6F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FACBF3322754035D00E22F6F /* Main.storyboard */,
+				FACBF3372754036000E22F6F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FACBF342275403DD00E22F6F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FACBF3302754035D00E22F6F /* ViewController.swift */,
+				FA9D32B92754093000101BC9 /* FactViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FACBF3452754040D00E22F6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FACBF3432754040600E22F6F /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACBF3442754040600E22F6F /* NetworkManager.swift in Sources */,
+				FA9D32BD275410C500101BC9 /* Fact.swift in Sources */,
+				FA9D32BA2754093000101BC9 /* FactViewController.swift in Sources */,
 				FACBF3312754035D00E22F6F /* ViewController.swift in Sources */,
 				FACBF32D2754035D00E22F6F /* AppDelegate.swift in Sources */,
 				FACBF32F2754035D00E22F6F /* SceneDelegate.swift in Sources */,
@@ -291,7 +343,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75J85Z3TN2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW_2.10/Info.plist;
+				INFOPLIST_FILE = HW_2.10/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +371,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75J85Z3TN2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW_2.10/Info.plist;
+				INFOPLIST_FILE = HW_2.10/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +386,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
