@@ -28,8 +28,6 @@ class NetworkManager {
             DispatchQueue.main.async {
                 imageView.image = image
                 indicator.stopAnimating()
-//                ViewController.imageView.image = image
-//                ViewController.activityIndicator.stopAnimating()
             }
         }.resume()
 }
@@ -46,7 +44,6 @@ class NetworkManager {
                 DispatchQueue.main.async {
                     textView.text = fact.value
                     indicator.stopAnimating()
-
                 }
             } catch let error {
                 print(error.localizedDescription)
