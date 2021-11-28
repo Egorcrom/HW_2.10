@@ -19,6 +19,5 @@ class FactViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         networkManager.fetchFact(textView: factTextView,
                                  indicator: activityIndicator)
-        self.activityIndicator.stopAnimating()
     }
 }
